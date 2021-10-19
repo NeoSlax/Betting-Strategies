@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/tabsFragment">
+
+    <fragment
+        android:id="@+id/tabsFragment"
+        android:name="com.example.betting_strategies.framework.presentation.tabs.TabFragment"
+        android:label="Tabs Fragment"
+        tools:layout="@layout/fragment_tabs">
+        <action
+            android:id="@+id/action_tabs_to_details"
+            app:destination="@id/detailsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/detailsFragment"
+        android:name="com.example.betting_strategies.framework.presentation.strategy_details.DetailsFragment"
+        android:label="Details Fragment"
+        tools:layout="@layout/fragment_details">
+
+        <argument
+            android:name="dataItem"
+            app:argType="com.example.betting_strategies.business.domain.model.DataItem" />
+
+    </fragment>
+
+</navigation>
