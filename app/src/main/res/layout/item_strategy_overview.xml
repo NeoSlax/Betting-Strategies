@@ -46,7 +46,7 @@
             android:layout_gravity="center_vertical"
             android:layout_marginStart="16dp"
             android:lines="1"
-            android:text="Вчера в 15:30" />
+            android:text="@string/show_more_text" />
     </LinearLayout>
 
     <com.example.betting_strategies.framework.base.view.StarView

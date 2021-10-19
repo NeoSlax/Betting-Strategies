@@ -24,8 +24,7 @@ class StrategyViewHolder(private val binding: ItemStrategyOverviewBinding) : Rec
         dataItem = s
         isSwipeable = dataItem?.getIsFavorite() ?: false
         this.clickListener = clickListener
-        binding.title.text = s?.id
-        binding.description.text = s?.name
+        binding.title.text = s?.name
         binding.addToFavorites.setFill(s?.getIsFavorite() ?: false)
         loadImage(binding.imageView, s?.imageUrl)
     }
